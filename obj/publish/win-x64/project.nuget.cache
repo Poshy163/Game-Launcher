@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZOg6zMpK3zRzT+Ax2kk1+16OtANxIbQkCVXG04vUylAsyKE5hqzIYIu8RBYAu3YurB7SvpeJ0kdb0zFKB6/6fw==",
+  "success": true,
+  "projectFilePath": "C:\\GitHub\\Repos\\Billboard-Game-Source\\Launcher\\GameLauncher\\GameLauncher.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LeaperJ\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\LeaperJ\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\3.1.15\\microsoft.netcore.app.runtime.win-x64.3.1.15.nupkg.sha512",
+    "C:\\Users\\LeaperJ\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\3.1.15\\microsoft.windowsdesktop.app.runtime.win-x64.3.1.15.nupkg.sha512",
+    "C:\\Users\\LeaperJ\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\3.1.15\\microsoft.aspnetcore.app.runtime.win-x64.3.1.15.nupkg.sha512"
+  ],
+  "logs": []
+}

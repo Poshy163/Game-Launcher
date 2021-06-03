@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>GameLauncher</id>
+    <version>1.0.0</version>
+    <authors>GameLauncher</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="Newtonsoft.Json" version="13.0.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\GitHub\Repos\Billboard-Game-Source\Launcher\GameLauncher\bin\Debug\netcoreapp3.1\GameLauncher.runtimeconfig.json" target="lib\netcoreapp3.1\GameLauncher.runtimeconfig.json" />
+    <file src="C:\GitHub\Repos\Billboard-Game-Source\Launcher\GameLauncher\bin\Debug\netcoreapp3.1\GameLauncher.dll" target="lib\netcoreapp3.1\GameLauncher.dll" />
+  </files>
+</package>
