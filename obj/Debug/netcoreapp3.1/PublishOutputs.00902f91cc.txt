@@ -1,0 +1,6 @@
+C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\publish\Game Launcher.exe
+C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\publish\Game Launcher.dll
+C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\publish\Game Launcher.deps.json
+C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\publish\Game Launcher.runtimeconfig.json
+C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\publish\Game Launcher.pdb
+C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\publish\Newtonsoft.Json.dll
