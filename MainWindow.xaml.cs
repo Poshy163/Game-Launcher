@@ -90,7 +90,7 @@ namespace GameLauncher
             }
             try
             {
-                localVersion = File.ReadAllText(Path.Combine(rootPath, GameFolderName, "Version.txt"));
+                localVersion = File.ReadAllText(Path.Combine(rootPath, GameFolderName, "MonoBleedingEdge", "Version.txt"));
             }
             catch { }
             VersionText.Text = localVersion;
@@ -99,6 +99,7 @@ namespace GameLauncher
             {
                 if (localVersion != OnlineVerion)
                 {
+                    VersionText.Visibility = Visibility.Hidden;
                     Progress.Visibility = Visibility.Visible;
                     Status = LauncherStatus.downloadingGame;
                     InstallGameFiles(true);
@@ -157,7 +158,13 @@ namespace GameLauncher
                 File.Delete(gameZip);
                 Progress.Value++;
                 Status = LauncherStatus.ready;
+                try
+                {
+                    VersionText.Text = File.ReadAllText(Path.Combine(rootPath, GameFolderName, "MonoBleedingEdge", "Version.txt"));
+                }
+                catch { }
                 Progress.Visibility = Visibility.Hidden;
+                VersionText.Visibility = Visibility.Visible;
             }
             catch (Exception ex)
             {
