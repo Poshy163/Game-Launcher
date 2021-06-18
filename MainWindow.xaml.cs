@@ -63,6 +63,7 @@ namespace GameLauncher
         public MainWindow()
         {
             InitializeComponent();
+            VersionText.Text = "";
             Progress.Visibility = Visibility.Hidden;
             rootPath = Directory.GetCurrentDirectory();
             gameZip = Path.Combine(rootPath, ZipName + ".zip");
