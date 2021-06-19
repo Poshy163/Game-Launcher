@@ -20,14 +20,14 @@ namespace GameLauncher
 
     public partial class MainWindow : Window
     {
-        private readonly string rootPath;
+        private readonly string launcherPath;
         private readonly string gameZip;
         private readonly string gameExe;
         private readonly string ZipName = "NewVersion";
         private readonly string GameFolderName = "Game";
         private readonly string GameName = "Billboard Shooter.exe";
-
         private string lastCommit;
+        private readonly string InstallLocation;
         private LauncherStatus _status;
 
         internal LauncherStatus Status
@@ -65,9 +65,10 @@ namespace GameLauncher
             InitializeComponent();
             VersionText.Text = "";
             Progress.Visibility = Visibility.Hidden;
-            rootPath = Directory.GetCurrentDirectory();
-            gameZip = Path.Combine(rootPath, ZipName + ".zip");
-            gameExe = Path.Combine(rootPath, GameFolderName, GameName);
+            InstallLocation = @"C:\Users\LeaperJ\Pictures";
+            launcherPath = Directory.GetCurrentDirectory();
+            gameZip = Path.Combine(launcherPath, ZipName + ".zip");
+            gameExe = Path.Combine(InstallLocation, GameFolderName, GameName);
         }
 
         private void CheckForUpdates()
@@ -91,7 +92,7 @@ namespace GameLauncher
             }
             try
             {
-                localVersion = File.ReadAllText(Path.Combine(rootPath, GameFolderName, "MonoBleedingEdge", "Version.txt"));
+                localVersion = File.ReadAllText(Path.Combine(InstallLocation, GameFolderName, "MonoBleedingEdge", "Version.txt"));
             }
             catch { }
             VersionText.Text = localVersion;
@@ -145,23 +146,23 @@ namespace GameLauncher
         {
             try
             {
-                if (Directory.Exists(Path.Combine(rootPath, GameFolderName)))
+                if (Directory.Exists(Path.Combine(launcherPath, GameFolderName)))
                 {
-                    Directory.Delete(Path.Combine(rootPath, GameFolderName), true);
+                    Directory.Delete(Path.Combine(launcherPath, GameFolderName), true);
                 }
                 Progress.Value++;
-                ZipFile.ExtractToDirectory(gameZip, Path.Combine(rootPath, "TempFolder"), true);
+                ZipFile.ExtractToDirectory(gameZip, Path.Combine(InstallLocation, "TempFolder"), true);
                 Progress.Value++;
-                Directory.Move(Path.Combine(rootPath, "TempFolder", FindFolder()), Path.Combine(rootPath, GameFolderName));
+                Directory.Move(Path.Combine(InstallLocation, "TempFolder", FindFolder()), Path.Combine(@"C:\Users\LeaperJ\Pictures", GameFolderName));
                 Progress.Value++;
-                Directory.Delete(Path.Combine(rootPath, "TempFolder"));
+                Directory.Delete(Path.Combine(InstallLocation, "TempFolder"));
                 Progress.Value++;
                 File.Delete(gameZip);
                 Progress.Value++;
                 Status = LauncherStatus.ready;
                 try
                 {
-                    VersionText.Text = File.ReadAllText(Path.Combine(rootPath, GameFolderName, "MonoBleedingEdge", "Version.txt"));
+                    VersionText.Text = File.ReadAllText(Path.Combine(InstallLocation, GameFolderName, "MonoBleedingEdge", "Version.txt"));
                 }
                 catch { }
                 Progress.Visibility = Visibility.Hidden;
@@ -197,7 +198,7 @@ namespace GameLauncher
         private string FindFolder()
         {
             string searchQuery = "*" + "Poshy163-Billboard-Game" + "*";
-            string folderName = rootPath;
+            string folderName = InstallLocation;
             DirectoryInfo directory = new DirectoryInfo(folderName);
             DirectoryInfo[] directories = directory.GetDirectories(searchQuery, SearchOption.AllDirectories);
             foreach (DirectoryInfo d in directories)
