@@ -152,7 +152,6 @@ namespace GameLauncher
                 if (Directory.Exists(Path.Combine(InstallLocation, GameFolderName)))
                 {
                     Directory.Delete(Path.Combine(InstallLocation, GameFolderName), true);
-                    MessageBox.Show("GONE");
                 }
                 Progress.Value++;
                 ZipFile.ExtractToDirectory(gameZip, Path.Combine(InstallLocation, "TempFolder"), true);
@@ -192,13 +191,13 @@ namespace GameLauncher
             {
                 File.Delete(Locationtxt);
                 using StreamWriter outputFile = new StreamWriter(Locationtxt);
-                outputFile.WriteLine(Directory.GetCurrentDirectory());
+                outputFile.WriteLine(Path.Combine(Directory.GetCurrentDirectory(), "Game Launcher.exe"));
                 outputFile.Close();
             }
             else
             {
                 using StreamWriter outputFile = new StreamWriter(Locationtxt);
-                outputFile.WriteLine(Directory.GetCurrentDirectory());
+                outputFile.WriteLine(Path.Combine(Directory.GetCurrentDirectory(), "Game Launcher.exe"));
                 outputFile.Close();
             }
         }
