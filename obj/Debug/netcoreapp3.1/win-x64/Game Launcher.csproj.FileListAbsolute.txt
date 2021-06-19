@@ -218,7 +218,6 @@ C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\win-x64\dbgshim.dll
 C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\win-x64\hostfxr.dll
 C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\win-x64\hostpolicy.dll
 C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\win-x64\mscordaccore.dll
-C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.21.21202.dll
 C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\win-x64\mscordbi.dll
 C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\win-x64\mscorrc.debug.dll
 C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\win-x64\mscorrc.dll
@@ -499,3 +498,4 @@ C:\GitHub\Repos\Game-Launcher\obj\Debug\netcoreapp3.1\win-x64\Game Launcher.cspr
 C:\GitHub\Repos\Game-Launcher\obj\Debug\netcoreapp3.1\win-x64\Game Launcher.dll
 C:\GitHub\Repos\Game-Launcher\obj\Debug\netcoreapp3.1\win-x64\Game Launcher.pdb
 C:\GitHub\Repos\Game-Launcher\obj\Debug\netcoreapp3.1\win-x64\Game Launcher.genruntimeconfig.cache
+C:\GitHub\Repos\Game-Launcher\bin\Debug\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.21.26205.dll
