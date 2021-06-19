@@ -27,6 +27,7 @@ namespace GameLauncher
         private readonly string GameFolderName = "Game";
         private readonly string GameName = "Billboard Shooter.exe";
         private string lastCommit;
+        private readonly string Locationtxt;
         private readonly string InstallLocation;
         private LauncherStatus _status;
 
@@ -65,10 +66,11 @@ namespace GameLauncher
             InitializeComponent();
             VersionText.Text = "";
             Progress.Visibility = Visibility.Hidden;
-            InstallLocation = @"C:\Users\LeaperJ\Pictures";
+            InstallLocation = @$"C:\Users\{Environment.UserName}\Videos"; //Use this to change the install location
             launcherPath = Directory.GetCurrentDirectory();
             gameZip = Path.Combine(launcherPath, ZipName + ".zip");
             gameExe = Path.Combine(InstallLocation, GameFolderName, GameName);
+            Locationtxt = Path.Combine(InstallLocation, GameFolderName, "MonoBleedingEdge", "Location.txt");
         }
 
         private void CheckForUpdates()
@@ -108,6 +110,7 @@ namespace GameLauncher
                 }
                 else
                 {
+                    SendCurrentLocation();
                     Status = LauncherStatus.ready;
                     return;
                 }
@@ -146,14 +149,15 @@ namespace GameLauncher
         {
             try
             {
-                if (Directory.Exists(Path.Combine(launcherPath, GameFolderName)))
+                if (Directory.Exists(Path.Combine(InstallLocation, GameFolderName)))
                 {
-                    Directory.Delete(Path.Combine(launcherPath, GameFolderName), true);
+                    Directory.Delete(Path.Combine(InstallLocation, GameFolderName), true);
+                    MessageBox.Show("GONE");
                 }
                 Progress.Value++;
                 ZipFile.ExtractToDirectory(gameZip, Path.Combine(InstallLocation, "TempFolder"), true);
                 Progress.Value++;
-                Directory.Move(Path.Combine(InstallLocation, "TempFolder", FindFolder()), Path.Combine(@"C:\Users\LeaperJ\Pictures", GameFolderName));
+                Directory.Move(Path.Combine(InstallLocation, "TempFolder", FindFolder()), Path.Combine(InstallLocation, GameFolderName));
                 Progress.Value++;
                 Directory.Delete(Path.Combine(InstallLocation, "TempFolder"));
                 Progress.Value++;
@@ -165,12 +169,14 @@ namespace GameLauncher
                     VersionText.Text = File.ReadAllText(Path.Combine(InstallLocation, GameFolderName, "MonoBleedingEdge", "Version.txt"));
                 }
                 catch { }
+                SendCurrentLocation();
                 Progress.Visibility = Visibility.Hidden;
                 VersionText.Visibility = Visibility.Visible;
             }
             catch (Exception ex)
             {
                 Status = LauncherStatus.failed;
+                try { File.Delete(gameZip); } catch { }
                 MessageBox.Show($"Error finishing download: {ex}");
             }
         }
@@ -178,6 +184,23 @@ namespace GameLauncher
         private void Window_ContentRendered(object sender, EventArgs e)
         {
             CheckForUpdates();
+        }
+
+        private void SendCurrentLocation()
+        {
+            if (File.Exists(Locationtxt))
+            {
+                File.Delete(Locationtxt);
+                using StreamWriter outputFile = new StreamWriter(Locationtxt);
+                outputFile.WriteLine(Directory.GetCurrentDirectory());
+                outputFile.Close();
+            }
+            else
+            {
+                using StreamWriter outputFile = new StreamWriter(Locationtxt);
+                outputFile.WriteLine(Directory.GetCurrentDirectory());
+                outputFile.Close();
+            }
         }
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
