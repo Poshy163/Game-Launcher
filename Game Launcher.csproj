@@ -6,7 +6,18 @@
     <RootNamespace>Game_Launcher</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>images\Icon.ico</ApplicationIcon>
-    <AssemblyName>GameLauncher</AssemblyName>
+    <AssemblyName>Game Launcher</AssemblyName>
+    <PackageId>Game Launcher</PackageId>
+    <Authors>Joshua Leaper</Authors>
+    <Company>Poshy inc.</Company>
+    <Product>Game Launcher</Product>
+    <RepositoryUrl></RepositoryUrl>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+    <Optimize>true</Optimize>
   </PropertyGroup>
 
   <ItemGroup>

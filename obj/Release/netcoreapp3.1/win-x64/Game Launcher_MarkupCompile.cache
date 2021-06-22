@@ -1,10 +1,10 @@
 ﻿Game Launcher
-1.0.0.0
+
 
 winexe
 C#
 .cs
-C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\
+C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\
 Game_Launcher
 none
 false
@@ -12,9 +12,9 @@ TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
 C:\GitHub\Repos\Game-Launcher\App.xaml
 11407045341
 
-5-1558917166
+3-1233169557
 193-1217825993
 MainWindow.xaml;
 
-True
+False
 

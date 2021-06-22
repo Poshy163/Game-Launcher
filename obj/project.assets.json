@@ -56,7 +56,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\GitHub\\Repos\\Game-Launcher\\Game Launcher.csproj",
-      "projectName": "GameLauncher",
+      "projectName": "Game Launcher",
       "projectPath": "C:\\GitHub\\Repos\\Game-Launcher\\Game Launcher.csproj",
       "packagesPath": "C:\\Users\\LeaperJ\\.nuget\\packages\\",
       "outputPath": "C:\\GitHub\\Repos\\Game-Launcher\\obj\\",
