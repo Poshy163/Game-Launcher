@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Game Launcher/1.0.0": {
+      "GameLauncher/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
-          "Game Launcher.dll": {}
+          "GameLauncher.dll": {}
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -25,7 +25,7 @@
     }
   },
   "libraries": {
-    "Game Launcher/1.0.0": {
+    "GameLauncher/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

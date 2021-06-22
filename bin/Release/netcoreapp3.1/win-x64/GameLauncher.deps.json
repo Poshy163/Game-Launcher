@@ -7,14 +7,14 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {},
     ".NETCoreApp,Version=v3.1/win-x64": {
-      "Game Launcher/1.0.0": {
+      "GameLauncher/1.0.0": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
           "runtimepack.Microsoft.NETCore.App.Runtime.win-x64": "3.1.16",
           "runtimepack.Microsoft.WindowsDesktop.App.Runtime.win-x64": "3.1.16"
         },
         "runtime": {
-          "Game Launcher.dll": {}
+          "GameLauncher.dll": {}
         }
       },
       "runtimepack.Microsoft.NETCore.App.Runtime.win-x64/3.1.16": {
@@ -1072,7 +1072,7 @@
     }
   },
   "libraries": {
-    "Game Launcher/1.0.0": {
+    "GameLauncher/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -191,13 +191,13 @@ namespace GameLauncher
             {
                 File.Delete(Locationtxt);
                 using StreamWriter outputFile = new StreamWriter(Locationtxt);
-                outputFile.WriteLine(Path.Combine(Directory.GetCurrentDirectory(), "Game Launcher.exe"));
+                outputFile.WriteLine(Path.Combine(Directory.GetCurrentDirectory(), "GameLauncher.exe"));
                 outputFile.Close();
             }
             else
             {
                 using StreamWriter outputFile = new StreamWriter(Locationtxt);
-                outputFile.WriteLine(Path.Combine(Directory.GetCurrentDirectory(), "Game Launcher.exe"));
+                outputFile.WriteLine(Path.Combine(Directory.GetCurrentDirectory(), "GameLauncher.exe"));
                 outputFile.Close();
             }
         }
@@ -206,8 +206,7 @@ namespace GameLauncher
         {
             if (File.Exists(gameExe) && Status == LauncherStatus.ready)
             {
-                ProcessStartInfo startInfo = new ProcessStartInfo(gameExe);
-                Process.Start(startInfo);
+                Process.Start(new ProcessStartInfo(gameExe));
                 Close();
             }
             else if (Status == LauncherStatus.failed)

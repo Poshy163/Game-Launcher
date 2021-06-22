@@ -1,9 +1,3 @@
-C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Game Launcher.exe
-C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Game Launcher.deps.json
-C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Game Launcher.runtimeconfig.json
-C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Game Launcher.runtimeconfig.dev.json
-C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Game Launcher.dll
-C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Game Launcher.pdb
 C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Newtonsoft.Json.dll
 C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Microsoft.CSharp.dll
 C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Microsoft.VisualBasic.Core.dll
@@ -487,15 +481,21 @@ C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\vcruntime140_cor
 C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\wpfgfx_cor3.dll
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\MainWindow.g.cs
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\App.g.cs
-C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher_MarkupCompile.cache
-C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher_MarkupCompile.lref
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\MainWindow.baml
-C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.g.resources
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.AssemblyInfoInputs.cache
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.AssemblyInfo.cs
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.csproj.CoreCompileInputs.cache
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.csproj.CopyComplete
-C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.dll
-C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.pdb
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.genruntimeconfig.cache
 C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.21.26205.dll
+C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\GameLauncher.exe
+C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\GameLauncher.deps.json
+C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\GameLauncher.runtimeconfig.json
+C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\GameLauncher.runtimeconfig.dev.json
+C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\GameLauncher.dll
+C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\GameLauncher.pdb
+C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\GameLauncher_MarkupCompile.cache
+C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\GameLauncher_MarkupCompile.lref
+C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\GameLauncher.g.resources
+C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\GameLauncher.dll
+C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\GameLauncher.pdb

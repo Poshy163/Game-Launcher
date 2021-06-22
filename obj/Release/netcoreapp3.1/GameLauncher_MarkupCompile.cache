@@ -4,12 +4,12 @@
 winexe
 C#
 .cs
-C:\GitHub\Repos\Billboard-Game-Source\Launcher\GameLauncher\obj\Release\netcoreapp3.1\
-GameLauncher
+C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\
+Game_Launcher
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
-C:\GitHub\Repos\Billboard-Game-Source\Launcher\GameLauncher\App.xaml
+C:\GitHub\Repos\Game-Launcher\App.xaml
 11407045341
 
 3-1233169557

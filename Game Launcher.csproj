@@ -6,6 +6,7 @@
     <RootNamespace>Game_Launcher</RootNamespace>
     <UseWPF>true</UseWPF>
     <ApplicationIcon>images\Icon.ico</ApplicationIcon>
+    <AssemblyName>GameLauncher</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
