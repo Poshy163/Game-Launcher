@@ -20,13 +20,17 @@ namespace GameLauncher
 
     public partial class MainWindow : Window
     {
+        private const string LauncherVersion = "1.1.0";
         private readonly string launcherPath;
         private readonly string gameZip;
         private readonly string gameExe;
         private readonly string ZipName = "NewVersion";
         private readonly string GameFolderName = "Game";
         private readonly string GameName = "Billboard Shooter.exe";
+        private const string CommitsURL = "https://api.github.com/repos/Poshy163/Billboard-Game/commits";
+        private const string ZipURL = "https://api.github.com/repos/Poshy163/Billboard-Game/zipball";
         private string lastCommit;
+
         private readonly string Locationtxt;
         private readonly string InstallLocation;
         private LauncherStatus _status;
@@ -81,7 +85,7 @@ namespace GameLauncher
             {
                 HttpClient client = new HttpClient();
                 client.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; WOW64; Trident/6.0)");
-                string json = client.GetAsync("https://api.github.com/repos/Poshy163/Billboard-Game/commits").Result.Content.ReadAsStringAsync().Result;
+                string json = client.GetAsync(CommitsURL).Result.Content.ReadAsStringAsync().Result;
                 dynamic commits;
                 try { commits = JArray.Parse(json); } catch { MessageBox.Show(json + ""); return; }
                 lastCommit = commits[0].commit.message;
@@ -134,7 +138,7 @@ namespace GameLauncher
                 Progress.Value++;
                 webClient.Headers.Add("user-agent", "Mozilla/4.0 (compatible; MSIE 6.0; " + "Windows NT 5.2; .NET CLR 1.0.3705;)");
                 Progress.Value++;
-                webClient.DownloadFileAsync(new Uri("https://api.github.com/repos/Poshy163/Billboard-Game/zipball"), ZipName + ".zip");
+                webClient.DownloadFileAsync(new Uri(ZipURL), ZipName + ".zip");
                 Progress.Value++;
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadGameCompletedCallback);
             }
@@ -218,8 +222,8 @@ namespace GameLauncher
 
         private string FindFolder()
         {
-            string searchQuery = "*" + "Poshy163-Billboard-Game" + "*";
-            string folderName = InstallLocation;
+            string searchQuery = "*" + "Poshy163-Billboard-Game" + "*"; // Change the search query if needed to find the folder, This is normally the repo name
+            string folderName = InstallLocation; // This is the name of the folder
             DirectoryInfo directory = new DirectoryInfo(folderName);
             DirectoryInfo[] directories = directory.GetDirectories(searchQuery, SearchOption.AllDirectories);
             foreach (DirectoryInfo d in directories)
@@ -228,7 +232,13 @@ namespace GameLauncher
                 string[] temp = loction.Split(char.Parse(@"\"));
                 return temp[^1];
             }
+            MessageBox.Show("Cannot Find Folder");
             return null;
+        }
+
+        private void Info(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show($"Launcher Version {LauncherVersion} \nGame Install Location: {InstallLocation}\n");
         }
     }
 }
