@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ms/0x70y1lXJoE08kPgKMbKz8K8pO3h5J8zZLXeIz41HffxBa5LjSs3ChVHVx3zyAXhu5mGe651X47MkvQa4sg==",
+  "success": true,
+  "projectFilePath": "C:\\GitHub\\Repos\\Game-Launcher\\Game Launcher.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\LeaperJ\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

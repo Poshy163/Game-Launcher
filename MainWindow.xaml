@@ -15,6 +15,6 @@
                      Height="36" Margin="0,10,0,0" VerticalAlignment="Top" Width="309"
                      Foreground="Green" Maximum="8" Minimum="0" Background="#FFBFBEBE" />
         <TextBlock x:Name="VersionText" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,10,0,0" Text="0.0.0" TextWrapping="Wrap" VerticalAlignment="Top" Width="308" FontSize="25" Height="36"  RenderTransformOrigin="0.502,0.254" />
-        <Button Click="Info" FontSize="20" FontWeight="Bold" Foreground="White" x:Name="InfoBox" Content="?" HorizontalAlignment="Right"  Background="#FFFF9700"  VerticalAlignment="Top" Width="40" Height="40" />
+        <Button Click="Info" FontSize="20" FontWeight="Bold" Foreground="White" x:Name="InfoBox" Content="?" HorizontalAlignment="Right"  Background="#FFFF9700"  VerticalAlignment="Top" Width="35" Height="35" />
     </Grid>
 </Window>
