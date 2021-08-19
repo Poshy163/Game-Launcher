@@ -20,7 +20,7 @@ namespace GameLauncher
 
     public partial class MainWindow : Window
     {
-        private const string LauncherVersion = "1.1.0";
+        private const string LauncherVersion = "1.1.5";
         private readonly string launcherPath;
         private readonly string gameZip;
         private readonly string gameExe;
@@ -80,7 +80,6 @@ namespace GameLauncher
         private void CheckForUpdates()
         {
             string localVersion = "0.0.0";
-            string OnlineVerion = "0.0.0.0";
             try
             {
                 HttpClient client = new HttpClient();
@@ -89,45 +88,49 @@ namespace GameLauncher
                 dynamic commits;
                 try { commits = JArray.Parse(json); } catch { MessageBox.Show(json + ""); return; }
                 lastCommit = commits[0].commit.message;
-                OnlineVerion = lastCommit.Split("\n")[0].Split(" ")[1];
+                string OnlineVerion = lastCommit.Split("\n")[0].Split(" ")[1];
+                try
+                {
+                    localVersion = File.ReadAllText(Path.Combine(InstallLocation, GameFolderName, "MonoBleedingEdge", "Version.txt"));
+                }
+                catch { }
+                VersionText.Text = localVersion;
+                try
+                {
+                    if (localVersion != OnlineVerion)
+                    {
+                        VersionText.Visibility = Visibility.Hidden;
+                        Progress.Visibility = Visibility.Visible;
+                        Status = LauncherStatus.downloadingGame;
+                        InstallGameFiles(true);
+                    }
+                    else
+                    {
+                        SendCurrentLocation();
+                        Status = LauncherStatus.ready;
+                        return;
+                    }
+                }
+                catch
+                {
+                    Status = LauncherStatus.failed;
+                    MessageBox.Show($"Unable to reach GitHub servers");
+                }
             }
-            catch (Exception ex)
+            catch
             {
                 Status = LauncherStatus.failed;
-                MessageBox.Show($"Error checking for game updates: {ex}");
-            }
-            try
-            {
-                localVersion = File.ReadAllText(Path.Combine(InstallLocation, GameFolderName, "MonoBleedingEdge", "Version.txt"));
-            }
-            catch { }
-            VersionText.Text = localVersion;
-
-            try
-            {
-                if (localVersion != OnlineVerion)
-                {
-                    VersionText.Visibility = Visibility.Hidden;
-                    Progress.Visibility = Visibility.Visible;
-                    Status = LauncherStatus.downloadingGame;
-                    InstallGameFiles(true);
-                }
-                else
-                {
-                    SendCurrentLocation();
-                    Status = LauncherStatus.ready;
-                    return;
-                }
-            }
-            catch (Exception ex)
-            {
-                Status = LauncherStatus.failed;
-                MessageBox.Show($"Error checking for game updates: {ex}");
+                MessageBox.Show($"Unable to reach Github servers");
             }
         }
 
         private void InstallGameFiles(bool _isUpdate)
         {
+            if (Status == LauncherStatus.failed)
+            {
+                MessageBox.Show("BREAKING");
+            }
+
             try
             {
                 WebClient webClient = new WebClient();
@@ -142,10 +145,10 @@ namespace GameLauncher
                 Progress.Value++;
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadGameCompletedCallback);
             }
-            catch (Exception ex)
+            catch
             {
                 Status = LauncherStatus.failed;
-                MessageBox.Show($"Error installing game files: {ex}");
+                MessageBox.Show($"Error installing game files");
             }
         }
 
@@ -176,11 +179,10 @@ namespace GameLauncher
                 Progress.Visibility = Visibility.Hidden;
                 VersionText.Visibility = Visibility.Visible;
             }
-            catch (Exception ex)
+            catch
             {
                 Status = LauncherStatus.failed;
-                try { File.Delete(gameZip); } catch { }
-                MessageBox.Show($"Error finishing download: {ex}");
+                MessageBox.Show("HIT");
             }
         }
 
@@ -215,7 +217,6 @@ namespace GameLauncher
             }
             else if (Status == LauncherStatus.failed)
             {
-                MessageBox.Show("Launcher Failed, retrying");
                 CheckForUpdates();
             }
         }
