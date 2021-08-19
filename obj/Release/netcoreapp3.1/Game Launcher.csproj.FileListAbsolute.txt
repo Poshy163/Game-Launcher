@@ -19,3 +19,4 @@ C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\Game Launcher_MarkupComp
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\Game Launcher.g.resources
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\Game Launcher.dll
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\Game Launcher.pdb
+C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\Game Launcher.GeneratedMSBuildEditorConfig.editorconfig

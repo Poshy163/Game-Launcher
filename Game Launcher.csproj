@@ -13,7 +13,7 @@
     <Product>Game Launcher</Product>
     <RepositoryUrl></RepositoryUrl>
     <NoWin32Manifest>true</NoWin32Manifest>
-    <Version>1.1.0</Version>
+    <Version>1.1.5</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

@@ -487,7 +487,6 @@ C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.As
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.csproj.CoreCompileInputs.cache
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.csproj.CopyComplete
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.genruntimeconfig.cache
-C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.21.26205.dll
 C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Game Launcher.exe
 C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Game Launcher.deps.json
 C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\Game Launcher.runtimeconfig.json
@@ -499,3 +498,5 @@ C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher_Ma
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.g.resources
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.dll
 C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.pdb
+C:\GitHub\Repos\Game-Launcher\bin\Release\netcoreapp3.1\win-x64\mscordaccore_amd64_amd64_4.700.21.35901.dll
+C:\GitHub\Repos\Game-Launcher\obj\Release\netcoreapp3.1\win-x64\Game Launcher.GeneratedMSBuildEditorConfig.editorconfig
